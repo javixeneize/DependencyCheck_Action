@@ -1,4 +1,5 @@
-name: 'Depcheck action'
+name: 'Dependency Check action'
+description: 'Github action to execute dependency check as part of a github workflow'
 inputs:
     project:
         required: true
@@ -8,7 +9,7 @@ inputs:
         required: true
 runs:
     using: 'docker'
-    image: 'docker://javidr/depcheckaction'
+    image: 'docker://owasp/dependency-check-action:latest'
     args:
 
         - '--project'
